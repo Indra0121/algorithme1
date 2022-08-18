@@ -1,0 +1,24 @@
+Algorithm checkpoint;
+
+var 
+n,compt1,compt2,i :integer;
+sent: string;
+begin 
+repeat read(sent) n := sent.lenght until sent(n) = "."
+compt1:=0;
+compt2:=0;
+i:=0;
+while (i<n) do 
+if sent[i] =" " then 
+compt1++
+i++
+else if sent[i]="a" or sent[i]="A" or sent[i]="e" or sent[i]="E" or sent[i]="i" or sent[i]="I" or sent[i]="o" or sent[i]="O" or sent[i]="y" or sent[i]="Y" then 
+compt2++
+i++
+else 
+i++
+fin_si
+fin_while
+
+
+
