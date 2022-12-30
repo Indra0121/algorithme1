@@ -1,24 +1,18 @@
-Algorithm checkpoint;
-
-var 
-n,compt1,compt2,i :integer;
-sent: string;
-begin 
-repeat read(sent) n := sent.lenght until sent(n) = "."
-compt1:=0;
-compt2:=0;
-i:=0;
-while (i<n) do 
-if sent[i] =" " then 
-compt1++
-i++
-else if sent[i]="a" or sent[i]="A" or sent[i]="e" or sent[i]="E" or sent[i]="i" or sent[i]="I" or sent[i]="o" or sent[i]="O" or sent[i]="y" or sent[i]="Y" then 
-compt2++
-i++
-else 
-i++
-fin_si
-fin_while
-
+algorithme checkpoint;
+var t: table[20] de caractere;
+s1,s2,i,n:entier;
+debut
+s1=1 //la liste contient au moins un mot ou sinon un point qui va etre considerer un "mot"
+s2=0;
+repeter lire(t); n=lenght(t) jusqu'a  t[n]='.';
+pour i de 1 a n faire 
+si t[i]=' ' alors 
+s1=s+1 ;/// puisque entre chaque mot y'a un seul espace , on compte les espaces qui separent
+finsi 
+si t[i]='a' ou t[i]='A' ou t[i]='e' ou t[i]='E' ou t[i]='o' ou t[i]='O' ou t[i]='u' ou t[i]='U' ou t[i]='y' ou t[i]='Y' alors
+s2=s2+1;
+finpour 
+ecrire("le nombre de mots est :",1,"le nombre de voyal :",s2):
+fin.
 
 
