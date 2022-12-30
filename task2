@@ -1,0 +1,36 @@
+algorithme checkpoint;
+var t1: table [1..20]entier;
+t2:table [1..20] entier;
+t3: table [1..20]entier;
+n,m,j,i:entier;
+debut 
+r:=0;
+repeter lire(n); jusqu'a n<20 et n>0;
+pour i de 1 a n pas faire 
+lire t1[i];
+fin pour ;
+repeter lire(m); jusqu'a m<20 et m>0;
+pour i de 1 a m pas faire 
+lire(t2[i]);
+finpour;
+si n >m alors 
+pour i de 1 a n pas faire 
+pour j de 1 a m pas faire
+si t1[i] =t2 [j] alors \\si il y'a un element en commun l'index incremente vers la nouvelle case 
+i++;
+fin si ;
+ finpour; 
+t3[r]:=t1[i];\\ quand la deuxieme boucle finie on ecrit sa valeur dans t3
+finpour;
+sinon 
+pour i de 1 a m pas faire 
+pour j de 1 a n pas faire
+si t2[i] =t1 [j] alors \\si il y'a un element en commun l'index incremente vers la nouvelle case 
+i++;
+fin si ;
+ finpour; 
+t3[r]:=t2[i];\\ quand la deuxieme boucle finie on ecrit sa valeur dans t3
+ecrire (t3[r]);
+r++
+finpour;
+fin.
